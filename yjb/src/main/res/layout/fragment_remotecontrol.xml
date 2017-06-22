@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--header-->
+    <LinearLayout
+        android:id="@+id/ll_rmcontrol_header"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:orientation="vertical">
+        <!--提示文字-->
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="当前设备：" />
+            <TextView
+                android:id="@+id/tv_control_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="        "/>
+        </LinearLayout>
+        <!--提示文字-->
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="联网状态：" />
+            <TextView
+                android:id="@+id/tv_control_netstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="  "/>
+        </LinearLayout>
+        <!--提示文字-->
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="设备状态：" />
+            <TextView
+                android:id="@+id/tv_control_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="  "/>
+        </LinearLayout>
+        <!--项目更改，先隐藏保持布局-->
+        <ImageView
+            android:id="@+id/iv_remotefg_state"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wateroff"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_remote_on"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginRight="25dp"
+                android:text="开水"
+                android:enabled="false"
+                android:background="@drawable/hui" />
+            <Button
+                android:id="@+id/btn_remote_off"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="关水"
+                android:enabled="false"
+                android:background="@drawable/hui"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/ll_rmcontrol_header"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_remotefg_zerodevice"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            />
+        <HorizontalScrollView
+            android:id="@+id/hs_remote_chooise"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </HorizontalScrollView>
+    </LinearLayout>
+    <!--body-->
+    <!--<LinearLayout-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+
+    <!--</LinearLayout>-->
+</RelativeLayout>
